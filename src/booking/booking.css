@@ -1,0 +1,126 @@
+/* 时段预约模块样式：访客组件 + 后台管理，与原有页面样式分开维护 */
+
+/* ---- 开关 ---- */
+.bk-switch{position:relative;display:inline-block;width:38px;height:22px;flex:none;cursor:pointer}
+.bk-switch input{opacity:0;width:0;height:0}
+.bk-slider{position:absolute;inset:0;background:#9fb0ac;border-radius:20px;transition:.18s}
+.bk-slider::before{content:'';position:absolute;width:16px;height:16px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.18s;box-shadow:0 1px 2px rgba(0,0,0,.25)}
+.bk-switch input:checked+.bk-slider{background:#317265}
+.bk-switch input:checked+.bk-slider::before{transform:translateX(16px)}
+
+/* ---- 内容编辑里的预约开关行 ---- */
+.bk-toggle-row{display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid #d4dcd7;border-radius:7px;padding:13px 15px;background:#f8faf7}
+.bk-toggle-row strong{display:block;font-size:13px}
+.bk-toggle-row small{font-size:11px;color:#8a9693}
+.bk-toggle-row.on{border-color:#9cc4b6;background:#f0f6f2}
+
+/* ---- 侧栏导航 ---- */
+nav button b{margin-left:auto;font-size:11px;font-weight:500}
+nav button b.nav-dot{background:#e6b45d;color:#18252a;border-radius:20px;min-width:20px;text-align:center;padding:2px 6px}
+nav button.active b{background:rgba(24,37,42,.18);color:#18252a}
+
+/* ---- 后台：展项列表行 ---- */
+.bk-ex-row{display:flex;align-items:center;gap:8px;padding-right:6px}
+.bk-ex-main{display:flex;align-items:center;gap:11px;flex:1;min-width:0;text-align:left;padding:12px 4px;background:none}
+.bk-list-hint{font-size:11px;color:#a0aaa6;padding:2px 2px 8px}
+
+/* ---- 后台统计与排期 ---- */
+.bk-admin .form-panel{max-width:760px}
+.bk-stat-row{display:flex;gap:10px;margin-bottom:20px}
+.bk-stat{flex:1;background:#f0f3ef;border-radius:7px;padding:12px 14px}
+.bk-stat b{display:block;font:600 22px 'Space Grotesk';letter-spacing:-.03em}
+.bk-stat small{font-size:11px;color:#7c8985}
+.bk-add-session{border:1px solid #dde4df;border-radius:8px;padding:14px;margin-bottom:22px;background:#fbfcf9}
+.bk-add-grid{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:8px;margin:10px 0 8px;align-items:end}
+.bk-add-grid label{font-size:11px;gap:5px}
+.bk-add-grid button{height:38px;white-space:nowrap}
+.bk-form-err{color:#b5483a;font-size:11px;font-weight:500}
+.bk-form-ok{color:#2f6d5f;font-size:11px;font-weight:500}
+.bk-days-admin{display:grid;gap:16px;margin-bottom:30px}
+.bk-day-admin{border:1px solid #e2e7e2;border-radius:8px;overflow:hidden}
+.bk-day-head{background:#eef2ed;padding:9px 14px;font:600 12px 'DM Mono';color:#43534f;letter-spacing:.04em}
+.bk-sess-card{display:flex;align-items:center;gap:16px;padding:12px 14px;border-top:1px solid #e8ece8;flex-wrap:wrap}
+.bk-sess-card:first-of-type{border-top:0}
+.bk-sess-card.canceled{opacity:.62;background:#f7f5f2}
+.bk-sess-time{display:flex;align-items:center;gap:10px;min-width:150px}
+.bk-sess-time strong{font:500 14px 'Space Grotesk'}
+.tag{font:10px 'DM Mono';padding:3px 8px;border-radius:20px;white-space:nowrap}
+.tag-future{background:#e3eae6;color:#41605a}
+.tag-live{background:#dcefe7;color:#21644f}
+.tag-end{background:#e6e6e1;color:#838c86}
+.tag-cancel{background:#f4e1dd;color:#a04b3e}
+.bk-sess-cap{display:flex;align-items:center;gap:12px;flex:1;flex-wrap:wrap}
+.bk-sess-cap label{display:flex;align-items:center;gap:6px;font-size:12px;color:#5e6d69}
+.bk-sess-cap label b{font:600 17px 'Space Grotesk'}
+.bk-sess-cap label input{width:70px;padding:6px 8px}
+.bk-sess-cap small{font-size:11px;color:#8a9693}
+.bk-sess-cap small.over{color:#a9601f;font-weight:600}
+.bk-cap-actions{display:flex;gap:6px}
+.bk-mini{font-size:11px;padding:5px 10px;border:1px solid #cbd3cf;border-radius:5px;background:#fff;color:#43524e}
+.bk-mini.primary{background:#22363a;color:#fff;border-color:#22363a}
+.bk-cancel-sess{font-size:11px;color:#a8503f;margin-left:auto}
+.bk-cancel-reason{color:#a8503f;font-size:11px;display:block}
+.bk-empty{padding:22px 12px;color:#93a09c;font-size:13px;text-align:center;background:#f5f7f4;border-radius:8px}
+
+/* ---- 记录表格 ---- */
+.bk-records{border-top:1px solid #dde1de;padding-top:18px}
+.bk-rec-filters{border:0;padding:0}
+.bk-table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12.5px}
+.bk-table th{font:10px 'DM Mono';text-transform:uppercase;letter-spacing:.07em;color:#8d9a96;text-align:left;padding:7px 8px;border-bottom:1px solid #e2e7e2}
+.bk-table td{padding:9px 8px;border-bottom:1px solid #eef1ee;vertical-align:top}
+.bk-table tr.row-canceled{opacity:.6}
+.bk-table .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:7px}
+.dot-confirmed{background:#317265}.dot-waitlist{background:#c08a2d}.dot-canceled{background:#b4604f}
+.bk-table em{color:#9a7a35;font-size:11px;font-style:normal}
+.bk-phone{display:block;color:#93a09c;font:11px 'DM Mono'}
+.bk-note-cell{max-width:190px;color:#5c6a66}
+.bk-empty-cell{text-align:center;color:#93a09c;padding:18px}
+
+/* ---- 访客端预约组件 ---- */
+.bk-widget{margin-top:30px;border-top:1px solid #d9d9d0;padding-top:24px;max-width:520px}
+.bk-widget-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bk-widget-head h2{font:600 24px 'Space Grotesk';letter-spacing:-.04em;margin:6px 0 0}
+.bk-badge{font:10px 'DM Mono';padding:5px 10px;border-radius:20px}
+.bk-badge.live{color:#2f6d5f;background:#dbece4}
+.bk-sub{font-size:13px;color:#6e7b78;margin:8px 0 16px}
+.bk-days{display:grid;gap:14px}
+.bk-day-name{font:500 12px 'DM Mono';color:#7d8a86;margin-bottom:7px;letter-spacing:.04em}
+.bk-slots{display:flex;flex-wrap:wrap;gap:8px}
+.bk-slot{border:1px solid #cfd7d1;border-radius:7px;background:#fff;padding:9px 13px;display:grid;gap:2px;text-align:left;transition:.15s}
+.bk-slot strong{font:600 13px 'Space Grotesk';letter-spacing:-.02em}
+.bk-slot small{font-size:11px;color:#8a9693}
+.bk-slot:hover{border-color:#7ea495}
+.bk-slot.on{border-color:#2f6d5f;background:#203238;color:#fff}
+.bk-slot.on small{color:#9fc8bb}
+
+.bk-form{margin-top:18px;background:#fff;border:1px solid #d4dcd7;border-radius:9px;padding:16px}
+.bk-form-title{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.bk-form-title strong{font:600 14px 'Space Grotesk'}
+.bk-form-title small{font-size:11px;color:#8a9693}
+.bk-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bk-form-grid label{font-size:11px;color:#687773;display:grid;gap:5px}
+.bk-form-grid .bk-wide{grid-column:1/-1}
+.bk-error{margin-top:10px;font-size:12px;color:#a8503f;background:#f8eae7;border:1px solid #eed3cc;border-radius:6px;padding:8px 10px}
+.bk-form-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:14px}
+.bk-primary{background:#203238;color:#fff;padding:9px 18px;border-radius:6px;font-size:13px;font-weight:600}
+.bk-ghost{font-size:12px;padding:9px 14px;border-radius:6px;border:1px solid #cfd7d1;background:#fff}
+
+.bk-result{margin-top:18px;border-radius:9px;padding:16px;border:1px solid #d4dcd7;background:#fff}
+.bk-result.ok{border-color:#9cc4b6;background:#f0f7f3}
+.bk-result.wait{border-color:#e3c996;background:#fbf6ea}
+.bk-result-tag{font-weight:600;font-size:13px}
+.bk-result h3{font:600 16px 'Space Grotesk';margin:8px 0 4px}
+.bk-result p{font-size:13px;color:#4f5d59;margin:2px 0}
+.bk-result-note{color:#6e7b78}
+.bk-alts{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0 4px}
+.bk-alts>small{font-size:12px;color:#8a8f89}
+.bk-alt{border:1px solid #c9b17e;background:#fff;border-radius:6px;padding:8px 12px;font-size:12px;color:#7a5c20;font-weight:600}
+.bk-alt:hover{background:#f6edda}
+
+.bk-chip{display:inline-block;margin-left:8px;font-style:normal;font:9px 'DM Mono';letter-spacing:.06em;background:#e4ede8;color:#316857;padding:3px 7px;border-radius:20px;vertical-align:1px}
+
+@media(max-width:850px){
+  .bk-add-grid{grid-template-columns:1fr 1fr}
+  .bk-table{font-size:12px}
+  .bk-note-cell{max-width:120px}
+}
